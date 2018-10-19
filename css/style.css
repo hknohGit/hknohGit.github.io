@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -231,9 +232,35 @@ body {
 
 /* 새소식 */
 
+.news,
+.media,
+.favorite {
+    padding: 20px;
+}
+
 .news {
     background: pink;
     width: 400px;
+}
+
+.news-date {
+    display: block;
+    text-align: right;
+    margin: 1em 0;
+}
+
+.news-brief {
+    line-height: 1.6;
+    margin: 1em 0;
+}
+
+.news-thumbnail {
+    text-align: center;
+}
+
+.news-thumbnail img {
+    width: 50%;
+    height: auto;
 }
 
 

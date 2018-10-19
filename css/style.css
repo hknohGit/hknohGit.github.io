@@ -98,8 +98,6 @@ body {
     justify-content: space-around;
 }
 
-.main-menu li {}
-
 .main-menu a {
     font-weight: 700;
     font-size: 2rem;
@@ -108,9 +106,110 @@ body {
     text-shadow: 1px 1px 3px #999, 2px 2px 3px #999, 3px 3px 3px #999;
 }
 
+
+/* 메인 콘텐츠 */
+
 .content {
-    background: transparent;
-    min-height: 1000px;
+    background: skyblue;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* 애니메이션 */
+
+.text-effect {
+    /* background-color: yellow; */
+    /* background-image: url("images/animation-bg.jpg"); */
+    /* background-size: 200px 200px; */
+    /* background-repeat: no-repeat; */
+    /* backgroun-position은 px로 주는 거랑 % 주는 것 다름 */
+    /* background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed; */
+    background: #333 url("images/animation-bg.jpg") no-repeat 50% 50% /cover fixed;
+    /* size 속성이 position이랑 구분 되기 위해 /붙임 */
+    width: 1000px;
+    position: relative;
+}
+
+.text-frame {
+    font-weight: 700;
+    /* font-size: 60px; */
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: blue;
+    transform: translate(-50%, -50%);
+}
+
+.frame1 {
+    /* animation-name: textSize;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation-play-state: paused; 자바스크립트로 컨트롤 할 때 버튼 제어로 사용 */
+    /* animation-delay: 5s;
+    animation-timing-function: ease-in-out; */
+    animation: textSize 3s forwards ease-in-out;
+}
+
+.frame2 {
+    opacity: 0;
+    animation: textSpin 3s forwards 3s ease-in-out;
+}
+
+@keyframes textSize {
+    0% {
+        font-size: 16px;
+    }
+    90% {
+        font-size: 60px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes textSpin {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(2turn);
+        transform-origin: 50% 50%;
+        opacity: 1;
+    }
+}
+
+
+/* 새소식 */
+
+.news {
+    background: pink;
+    width: 400px;
+}
+
+
+/* 추천 영상 */
+
+.media {
+    background: lime;
+    width: 600px;
+}
+
+
+/* 인기사이트 */
+
+.favorite {
+    background: orange;
+    width: 1000px;
 }
 
 .footer {
